@@ -36,7 +36,6 @@ class _MainPageState extends State<MainPage> {
             color: Color(0xFFB19F9F),
           ),
         ),
-        
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -45,36 +44,39 @@ class _MainPageState extends State<MainPage> {
             child: Row(
               children: <Widget>[
                 Expanded(
-                    child: GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      selectGender = Gender.male;
-                    });
-                  },
-                  child: MyCard(
-                    colour:
-                        selectGender == Gender.male ? activeCard : inactiveCard,
-                    cardIcon: CardImage(
-                      theIcon: FontAwesomeIcons.mars,
-                      theText: 'MALE',
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectGender = Gender.male;
+                      });
+                    },
+                    child: MyCard(
+                      colour: selectGender == Gender.male
+                          ? activeCard
+                          : inactiveCard,
+                      cardIcon: CardImage(
+                        theIcon: FontAwesomeIcons.mars,
+                        theText: 'MALE',
+                      ),
                     ),
                   ),
-                )),
+                ),
                 Expanded(
-                    child: GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      selectGender = Gender.female;
-                    });
-                  },
-                  child: MyCard(
-                    colour: selectGender == Gender.female
-                        ? activeCard
-                        : inactiveCard,
-                    cardIcon: CardImage(
-                        theIcon: FontAwesomeIcons.venus, theText: 'FEMALE'),
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectGender = Gender.female;
+                      });
+                    },
+                    child: MyCard(
+                      colour: selectGender == Gender.female
+                          ? activeCard
+                          : inactiveCard,
+                      cardIcon: CardImage(
+                          theIcon: FontAwesomeIcons.venus, theText: 'FEMALE'),
+                    ),
                   ),
-                )),
+                ),
               ],
             ),
           ),
@@ -192,52 +194,53 @@ class _MainPageState extends State<MainPage> {
                   ),
                 ),
                 Expanded(
-                    child: MyCard(
-                  colour: Color(0xFF1D1E33),
-                  cardIcon: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        'AGE',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontFamily: 'Roboto',
-                          fontWeight: FontWeight.bold,
-                          color: Color(0XFF8D8E98),
-                        ),
-                      ),
-                      Text(
-                        age.toString(),
-                        style: TextStyle(
-                          fontSize: 50,
-                          fontWeight: FontWeight.w800,
-                        ),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          RoundIconButton(
-                            icon: FontAwesomeIcons.minus,
-                            onPressed: () {
-                              setState(() {
-                                age--;
-                              });
-                            },
+                  child: MyCard(
+                    colour: Color(0xFF1D1E33),
+                    cardIcon: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          'AGE',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontFamily: 'Roboto',
+                            fontWeight: FontWeight.bold,
+                            color: Color(0XFF8D8E98),
                           ),
-                          SizedBox(width: 20),
-                          RoundIconButton(
-                            icon: FontAwesomeIcons.plus,
-                            onPressed: () {
-                              setState(() {
-                                age++;
-                              });
-                            },
+                        ),
+                        Text(
+                          age.toString(),
+                          style: TextStyle(
+                            fontSize: 50,
+                            fontWeight: FontWeight.w800,
                           ),
-                        ],
-                      ),
-                    ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            RoundIconButton(
+                              icon: FontAwesomeIcons.minus,
+                              onPressed: () {
+                                setState(() {
+                                  age--;
+                                });
+                              },
+                            ),
+                            SizedBox(width: 20),
+                            RoundIconButton(
+                              icon: FontAwesomeIcons.plus,
+                              onPressed: () {
+                                setState(() {
+                                  age++;
+                                });
+                              },
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                )),
+                ),
               ],
             ),
           ),

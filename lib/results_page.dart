@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'mainpage.dart';
+import 'gapwidget.dart';
 
 class ResultsPage extends StatelessWidget {
   //const ResultsPage({Key? key}) : super(key: key);
@@ -51,8 +52,8 @@ class ResultsPage extends StatelessWidget {
                 /* mainAxisAlignment: MainAxisAlignment.spaceEvenly, */
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  SizedBox(
-                    height: 25,
+                  GapWidget(
+                    space: 25,
                   ),
                   Text(
                     resultText.toUpperCase(),
@@ -62,9 +63,7 @@ class ResultsPage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(
-                    height: 25,
-                  ),
+                  GapWidget(space: 25),
                   Text(
                     bmiResult,
                     style: TextStyle(
@@ -72,9 +71,7 @@ class ResultsPage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(
-                    height: 30,
-                  ),
+                  GapWidget(space: 30),
                   Text(
                     'Normal BMI Range:',
                     style: TextStyle(
@@ -82,9 +79,7 @@ class ResultsPage extends StatelessWidget {
                       color: Color(0xFFB19F9F),
                     ),
                   ),
-                  SizedBox(
-                    height: 14,
-                  ),
+                  GapWidget(space: 14),
                   Text(
                     '18.5 - 25 kg/m2',
                     style: TextStyle(
@@ -93,9 +88,7 @@ class ResultsPage extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                  SizedBox(
-                    height: 46,
-                  ),
+                  GapWidget(space: 46),
                   Text(
                     interpretation,
                     textAlign: TextAlign.center,
@@ -138,3 +131,4 @@ class ResultsPage extends StatelessWidget {
     );
   }
 }
+
