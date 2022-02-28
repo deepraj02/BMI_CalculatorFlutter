@@ -48,9 +48,12 @@ class ResultsPage extends StatelessWidget {
             child: MyCard(
               colour: Color(0xFF1D1E33),
               cardIcon: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                /* mainAxisAlignment: MainAxisAlignment.spaceEvenly, */
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
+                  SizedBox(
+                    height: 25,
+                  ),
                   Text(
                     resultText.toUpperCase(),
                     style: TextStyle(
@@ -59,12 +62,39 @@ class ResultsPage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+                  SizedBox(
+                    height: 30,
+                  ),
                   Text(
                     bmiResult,
                     style: TextStyle(
                       fontSize: 100,
                       fontWeight: FontWeight.bold,
                     ),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Text(
+                    'Normal BMI Range:',
+                    style: TextStyle(
+                      fontSize: 23,
+                      color: Color(0xFFB19F9F),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 14,
+                  ),
+                  Text(
+                    '18.5 - 25 kg/m2',
+                    style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 46,
                   ),
                   Text(
                     interpretation,
