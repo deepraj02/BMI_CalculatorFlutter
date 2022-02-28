@@ -3,9 +3,9 @@
 Its a new flutter project in which I have created a simple BMI Calculator App.
 
 ## Project Preview
-![bmi_calculator](res\pic1.png "running on Pixel 4")
+![bmi_calculator](res/pic1.png "running on Pixel 4")
 
-![another one](res\pic2.png "Nice isn't it?")
+![another one](res/pic2.png "Nice isn't it?")
 
 
 ## Social Links:
